@@ -27,8 +27,7 @@ jobs:
       - name: Build image
         run: |
           docker build \
-          -t ghcr.io/${{ github.repository }}/python-api:latest .
-
+          -t ghcr.io/${{ github.repository }}/python-api:${{ github.sha }} .
       - name: Push image
         run: |
           docker push ghcr.io/${{ github.repository }}/python-api:latest
