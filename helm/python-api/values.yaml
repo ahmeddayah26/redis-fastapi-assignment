@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/ahmeddayah26/redis-fastapi-assignment/python-api
-  tag: CHANGE_ME
+  tag: a223fb1b4e0b779e46fc4f037920ba82629bbece
   pullPolicy: Always
 
 service:
