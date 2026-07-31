@@ -4,6 +4,11 @@ kind: Application
 metadata:
   name: python-api
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: python-api=ghcr.io/ahmeddayah26/redis-fastapi-assignment/python-api
+    argocd-image-updater.argoproj.io/python-api.update-strategy: newest-build
+    argocd-image-updater.argoproj.io/python-api.helm.image-name: image.repository
+    argocd-image-updater.argoproj.io/python-api.helm.image-tag: image.tag
 
 spec:
 

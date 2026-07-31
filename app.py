@@ -37,7 +37,7 @@ async def log_requests(request: Request, call_next):
 
 @app.get("/")
 def root():
-    return {"message": "Stage 10 GitOps update successful"}
+    return {"message": "Stage 13 Image Updater works!"}
 
 @app.post("/cache")
 def store_value(key: str, value: str):
