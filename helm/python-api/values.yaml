@@ -1,23 +1,26 @@
 replicaCount: 1
 
 image:
-  repository: python-api
+  repository: docker.io/library/python-api
   tag: latest
-  pullPolicy: Never
+  pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
   port: 80
   targetPort: 8000
 
-redis:
-  host: redis
-  port: 6379
-  password: redis-123
-  storage: "1Gi"
-
 ingress:
   enabled: true
   className: nginx
   host: localhost
-  path: /api(.*)
+
+redis:
+  host: redis
+  port: 6379
+
+secret:
+  password: redis-123
+
+persistence:
+  storage: 1Gi

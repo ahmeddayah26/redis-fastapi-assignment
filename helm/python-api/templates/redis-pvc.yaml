@@ -9,7 +9,7 @@ spec:
     - ReadWriteOnce
 
   resources:
-    requests: 
-      storage: {{ .Values.redis.storage }}
+    requests:
+      storage: {{ .Values.persistence.storage }}
 
   storageClassName: standard

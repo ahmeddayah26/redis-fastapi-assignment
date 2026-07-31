@@ -1,1 +1,0 @@
-# redis-fastapi-assignment
