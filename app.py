@@ -37,7 +37,7 @@ async def log_requests(request: Request, call_next):
 
 @app.get("/")
 def root():
-    return {"message": "FastAPI is working - deployed by Argo CD"}
+    return {"message": "Stage 10 GitOps update successful"}
 
 @app.post("/cache")
 def store_value(key: str, value: str):
