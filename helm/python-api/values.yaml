@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: docker.io/library/python-api
+  repository: ghcr.io/ahmeddayah26/redis-fastapi-assignment/python-api
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   type: ClusterIP
