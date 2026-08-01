@@ -2,8 +2,12 @@ from fastapi import FastAPI, HTTPException, Request
 import redis
 import os
 
+from prometheus_fastapi_instrumentator import Instrumentator
+
 
 app = FastAPI()
+
+Instrumentator().instrument(app).expose(app)
 
 
 # Redis connection settings
