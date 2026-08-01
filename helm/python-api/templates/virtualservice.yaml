@@ -1,12 +1,13 @@
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
-  name: {{ .Release.Name }}
+  name: python-api
 spec:
   hosts:
     - "*"
   gateways:
     - python-api-gateway
+
   http:
     - match:
         - uri:
@@ -15,6 +16,15 @@ spec:
         uri: /
       route:
         - destination:
-            host: {{ .Release.Name }}
+            host: python-api
             port:
-              number: {{ .Values.service.port }}
+              number: 80
+
+    - match:
+        - uri:
+            prefix: /health
+      route:
+        - destination:
+            host: python-api
+            port:
+              number: 80
