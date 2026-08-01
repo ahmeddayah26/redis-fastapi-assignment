@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: python-api
+  labels:
+    release: monitoring
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: Helm
+
+  namespaceSelector:
+    matchNames:
+      - default
+
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
