@@ -4,5 +4,5 @@ helm:
     value: ghcr.io/ahmeddayah26/redis-fastapi-assignment/python-api
     forcestring: true
   - name: image.tag
-    value: b6c467a154e1549309155491644f343ac5cdbdca
+    value: fbdf5e61d96d7b9f6f91d058ec72220e03e540f5
     forcestring: true
