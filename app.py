@@ -39,6 +39,10 @@ async def log_requests(request: Request, call_next):
 def root():
     return {"message": "Stage 13 Image Updater works!"}
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.post("/cache")
 def store_value(key: str, value: str):
 
