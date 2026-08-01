@@ -9,6 +9,7 @@ metadata:
     argocd-image-updater.argoproj.io/python-api.update-strategy: newest-build
     argocd-image-updater.argoproj.io/python-api.helm.image-name: image.repository
     argocd-image-updater.argoproj.io/python-api.helm.image-tag: image.tag
+    argocd-image-updater.argoproj.io/write-back-method: git
 
 spec:
 
